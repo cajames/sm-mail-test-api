@@ -1,0 +1,32 @@
+{
+  "name": "sm-mail-server",
+  "version": "0.0.0",
+  "description": "Mail Server for Tests",
+  "author": "Chris James <chris.james@siteminder.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch api --watch micro.config.js server.js",
+    "build": "nuxt build",
+    "start": "NODE_ENV=production node server.js",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "axios": "^0.16.x",
+    "micro": "^9.3.2",
+    "micro-route": "^2.5.0",
+    "nuxt": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-html": "^3.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">8.1.x"
+  }
+}
