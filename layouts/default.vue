@@ -1,10 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans tracking-normal leading-normal">
     <nuxt/>
   </div>
 </template>
-
-<script>
-export default {
-}
-</script>

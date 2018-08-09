@@ -1,1 +1,1 @@
-const { createError } = require('micro')
+const { createError, json } = require('micro')

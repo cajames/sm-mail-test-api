@@ -13,11 +13,14 @@
   },
   "dependencies": {
     "axios": "^0.16.x",
+    "joi": "^13.5.2",
     "micro": "^9.3.2",
     "micro-route": "^2.5.0",
-    "nuxt": "^1.4.2"
+    "nuxt": "^1.4.2",
+    "tailwindcss": "^0.6.4"
   },
   "devDependencies": {
+    "@nuxtjs/markdownit": "^1.2.1",
     "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "eslint-config-standard": "^10.2.1",
