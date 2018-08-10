@@ -17,6 +17,7 @@
     "micro": "^9.3.2",
     "micro-route": "^2.5.0",
     "nuxt": "^1.4.2",
+    "prismjs": "^1.15.0",
     "tailwindcss": "^0.6.4"
   },
   "devDependencies": {

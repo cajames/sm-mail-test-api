@@ -14,7 +14,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ["~/assets/tailwind.css"],
+  css: ["~/assets/tailwind.css", "~/assets/prism.css"],
 
   modules: ["@nuxtjs/markdownit"],
   /*
