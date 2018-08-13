@@ -19,10 +19,10 @@
     "micro-route": "^2.5.0",
     "nuxt": "^1.4.2",
     "prismjs": "^1.15.0",
-    "tailwindcss": "^0.6.4"
+    "tailwindcss": "^0.6.4",
+    "@nuxtjs/markdownit": "^1.2.1"
   },
   "devDependencies": {
-    "@nuxtjs/markdownit": "^1.2.1",
     "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "eslint-config-standard": "^10.2.1",
