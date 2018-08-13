@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.1",
     "axios": "^0.16.x",
     "github-markdown-css": "^2.10.0",
     "joi": "^13.5.2",
@@ -19,8 +20,7 @@
     "micro-route": "^2.5.0",
     "nuxt": "^1.4.2",
     "prismjs": "^1.15.0",
-    "tailwindcss": "^0.6.4",
-    "@nuxtjs/markdownit": "^1.2.1"
+    "tailwindcss": "^0.6.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
