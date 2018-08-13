@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.16.x",
+    "github-markdown-css": "^2.10.0",
     "joi": "^13.5.2",
     "micro": "^9.3.2",
     "micro-route": "^2.5.0",
