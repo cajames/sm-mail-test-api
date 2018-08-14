@@ -1,9 +1,10 @@
 const { sendError, createError, json, send } = require("micro");
 const Joi = require("joi");
+const cors = require('micro-cors')()
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
-module.exports = name => async (req, res) => {
+module.exports = cors(async (req, res) => {
     // Check JWT token
     const auth = req.headers["authorization"];
     if (!auth || auth !== `Bearer CDc3wYMfZRUzczQQiyfK`)
@@ -59,4 +60,4 @@ module.exports = name => async (req, res) => {
         }
         return sendError(req, res, createError(500, "Internal Error"));
     }
-};
+});

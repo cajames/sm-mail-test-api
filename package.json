@@ -18,6 +18,7 @@
     "github-markdown-css": "^2.10.0",
     "joi": "^13.5.2",
     "micro": "^9.3.2",
+    "micro-cors": "^0.1.0",
     "micro-route": "^2.5.0",
     "nuxt": "^1.4.2",
     "prismjs": "^1.15.0",

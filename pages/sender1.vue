@@ -1,49 +1,44 @@
-<template lang="md"><div class="py-8 container mx-auto markdown-body">
+<template lang="md">
 
 # Email Service 1
 > First mail service
 
-Url endpoint: [Here](/api/sender1)
+## API Endpoint
 
-Method: `POST`
+| Detail |  |
+|--- | --- |
+| URL | https://sm-email-api.herokuapp.com/api/sender1 |
+| Methods Supported | `POST` |
+| Description | This is an endpoint that sends an email using sender1 |
 
 ## Payload
 
-```clike
+```js
 {
-    from: Email,
-    to: [Email],
-    cc: [Email] // (optional),
-    bcc: [Email] // (optional),
-    subject: String,
-    text: String
+    "from": "test@test.com",
+    "to": ["persona@test.com"],
+    "cc": ["personb@test.com"], // (optional)
+    "bcc": ["personc@test.com"], // (optional)
+    "subject": "Some sort of subject",
+    "text": "The text of the payload"
 }
 ```
-
-| Key | Type | Required? |
-| --- | --- | --- |
-| `from` | Email | Yes |
-| `to` | [Email] | Yes |
-| `cc` | [Email] | No |
-| `bcc` | [Email] | No |
-| `subject` | String | Yes |
-| `text` | String | Yes |
 
 ## Security
 
 Need an `Authorization` header with every request.
 
 ```
-Bearer CDc3wYMfZRUzczQQiyfKsender1
+Bearer CDc3wYMfZRUzczQQiyfK
 ```
+
 
 ## Test API Fail case
 
 To test a fail case, put `sender1-fail` anywhere in the subject of the email.
 
-
 ## Test API Timeout case
 
 To test a fail case, put `sender1-timeout` anywhere in the subject of the email.
 
-</div></template>
+</template>

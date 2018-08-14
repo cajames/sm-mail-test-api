@@ -3,10 +3,10 @@ const Joi = require("joi");
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
-module.exports = name => async (req, res) => {
+module.exports = async (req, res) => {
     // Check JWT token
     const auth = req.headers["authorization"];
-    if (!auth || auth !== `Bearer CDc3wYMfZRUzczQQiyfK`)
+    if (!auth || auth !== `Bearer cUv9qKeeyyfTARRdNJo4`)
         return sendError(req, res, createError(401, "Unauthorised"));
 
     // Initialize payload schema

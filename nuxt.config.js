@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
     head: {
-        title: "starter",
+        title: "SiteMinder Email API",
         meta: [
             { charset: "utf-8" },
             {
@@ -13,10 +13,10 @@ module.exports = {
             {
                 hid: "description",
                 meta: "description",
-                content: "SM Test Mail API"
+                content: "SiteMinder Email API"
             }
         ],
-        link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }]
+        link: [{ rel: "icon", type: "image/x-icon", href: "favicon.png" }]
     },
     /*
   ** Global CSS

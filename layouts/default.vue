@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans tracking-normal leading-normal" ref="content">
+  <div class="font-sans min-h-screen tracking-normal leading-normal py-8 container mx-auto markdown-body" ref="content">
     <nuxt/>
   </div>
 </template>
@@ -9,7 +9,7 @@ import Prism from "prismjs";
 
 export default {
   mounted() {
-    this.highlightCode()
+    this.highlightCode();
   },
   methods: {
     highlightCode() {
@@ -29,3 +29,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.markdown-body table {
+  display: table;
+}
+</style>

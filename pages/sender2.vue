@@ -1,40 +1,35 @@
-<template lang="md"><div class="py-8 container mx-auto markdown-body">
+<template lang="md">
 
 # Email Service 2
 > Sender Mail service
 
-Url endpoint: [Here](/api/sender2)
+## API Endpoint
 
-Method: `POST`
+| Detail |  |
+|--- | --- |
+| URL | https://sm-email-api.herokuapp.com/api/sender2 |
+| Methods Supported | `POST` |
+| Description | This is an endpoint that sends an email using sender2 |
 
 ## Payload
 
-```clike
+```js
 {
-    from: Email,
-    to: [Email],
-    cc: [Email] // (optional),
-    bcc: [Email] // (optional),
-    subject: String,
-    text: String
+    "from": "test@test.com",
+    "to": ["persona@test.com"],
+    "cc": ["personb@test.com"], // (optional)
+    "bcc": ["personc@test.com"], // (optional)
+    "subject": "Some sort of subject",
+    "text": "The text of the payload"
 }
 ```
-
-| Key | Type | Required? |
-| --- | --- | --- |
-| `from` | Email | Yes |
-| `to` | [Email] | Yes |
-| `cc` | [Email] | No |
-| `bcc` | [Email] | No |
-| `subject` | String | Yes |
-| `text` | String | Yes |
 
 ## Security
 
 Need an `Authorization` header with every request.
 
 ```
-Bearer CDc3wYMfZRUzczQQiyfKsender2
+Bearer cUv9qKeeyyfTARRdNJo4
 ```
 
 ## Test API Fail case
@@ -46,4 +41,4 @@ To test a fail case, put `sender2-fail` anywhere in the subject of the email.
 
 To test a fail case, put `sender2-timeout` anywhere in the subject of the email.
 
-</div></template>
+</template>
