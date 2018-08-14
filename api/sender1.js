@@ -3,7 +3,7 @@ const Joi = require("joi");
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
-module.exports = name => async (req, res) => {
+module.exports = async (req, res) => {
     // Check JWT token
     const auth = req.headers["authorization"];
     if (!auth || auth !== `Bearer CDc3wYMfZRUzczQQiyfK`)
@@ -39,10 +39,10 @@ module.exports = name => async (req, res) => {
             "Duplicate emails present in to, cc or bcc."
         );
 
-        if (result.subject.includes(`${name}-fail`)) {
+        if (result.subject.includes(`sender1-fail`)) {
             return sendError(req, res, createError(500, "Internal Error"));
         }
-        if (result.subject.includes(`${name}-timeout`)) {
+        if (result.subject.includes(`sender1-timeout`)) {
             await timeout(30000)
             return sendError(req, res, createError(504, "Timeout"));
         }

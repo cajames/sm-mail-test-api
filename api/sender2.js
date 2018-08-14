@@ -39,10 +39,10 @@ module.exports = async (req, res) => {
             "Duplicate emails present in to, cc or bcc."
         );
 
-        if (result.subject.includes(`${name}-fail`)) {
+        if (result.subject.includes(`sender2-fail`)) {
             return sendError(req, res, createError(500, "Internal Error"));
         }
-        if (result.subject.includes(`${name}-timeout`)) {
+        if (result.subject.includes(`sender2-timeout`)) {
             await timeout(30000)
             return sendError(req, res, createError(504, "Timeout"));
         }
