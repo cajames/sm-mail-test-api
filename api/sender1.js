@@ -1,10 +1,12 @@
 const { sendError, createError, json, send } = require("micro");
 const Joi = require("joi");
 
-module.exports = async (req, res) => {
+const timeout = ms => new Promise(res => setTimeout(res, ms))
+
+module.exports = name => async (req, res) => {
     // Check JWT token
     const auth = req.headers["authorization"];
-    if (!auth || auth !== "Bearer CDc3wYMfZRUzczQQiyfK")
+    if (!auth || auth !== `Bearer CDc3wYMfZRUzczQQiyfK${name}`)
         return sendError(req, res, createError(401, "Unauthorised"));
 
     // Initialize payload schema
@@ -36,6 +38,15 @@ module.exports = async (req, res) => {
             Joi.array().unique(),
             "Duplicate emails present in to, cc or bcc."
         );
+
+        if (result.subject.includes(`${name}-fail`)) {
+            return sendError(req, res, createError(500, "Internal Error"));
+        }
+        if (result.subject.includes(`${name}-timeout`)) {
+            await timeout(30000)
+            return sendError(req, res, createError(504, "Timeout"));
+        }
+
         console.log("Email sent", result);
         return send(res, 200, "Email successfully sent");
     } catch (error) {

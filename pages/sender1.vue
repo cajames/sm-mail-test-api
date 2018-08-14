@@ -34,7 +34,16 @@ Method: `POST`
 Need an `Authorization` header with every request.
 
 ```
-Bearer CDc3wYMfZRUzczQQiyfK
+Bearer CDc3wYMfZRUzczQQiyfKsender1
 ```
+
+## Test API Fail case
+
+To test a fail case, put `sender1-fail` anywhere in the subject of the email.
+
+
+## Test API Timeout case
+
+To test a fail case, put `sender1-timeout` anywhere in the subject of the email.
 
 </div></template>
